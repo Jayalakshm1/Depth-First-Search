@@ -3,7 +3,6 @@ Lab Experiment 2: Depth First Search
 Write a program to implement depth first search.
 
 ```Program:
-
 graph = {
     '2': ['3', '4'],
     '3': ['5'],
@@ -13,16 +12,13 @@ graph = {
     '7': ['8'],
     '8': []
 }
-
 visited = set()  # Set for visited nodes.
-
 def dfs(graph, node):  # Function for DFS
     if node not in visited:
         print(node, end=" ")
         visited.add(node)
         for neighbour in graph[node]:
             dfs(graph, neighbour)
-
 # Driver Code
 print("DFS order is")
 dfs(graph, '2')
